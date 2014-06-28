@@ -37,15 +37,16 @@ func mandelbrot(x float64, y float64) int {
 		zi = temp + temp + ci
 
 		if zi2+zr2 > BAILOUT {
-			return i
+			break
 		}
 
 		if i > MAX_ITERATIONS {
-			return 0
+			i = 0
+			break
 		}
 	}
 	
-	return 0
+	return i
 }
 
 func main() {
