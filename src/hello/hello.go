@@ -25,10 +25,16 @@ func (p *Ape) Hello() {
 
 type Human struct {
 	Ape
+	first_name string
+	last_name string
 }
 
 func (p *Human) Hello() {
 	fmt.Println("Hello")
+}
+
+func (p *Human) Fullname() {
+	fmt.Println(p.first_name + " " + p.last_name)
 }
 
 func main() {
@@ -40,7 +46,8 @@ func main() {
 	aa.Say()
 	aa.Hello()
 	
-	p := Human{Ape{Animal{"Yo"}}}
+	p := Human{Ape{Animal{"Yo"}}, "Lucy", "Sky"}
 	p.Say()
 	p.Hello()
+	p.Fullname()
 }
