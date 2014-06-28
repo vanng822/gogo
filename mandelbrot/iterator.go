@@ -6,12 +6,13 @@ const BAILOUT float64 = 16
 const MAX_ITERATIONS int = 1000
 
 func mandelbrot_main() {
-	for y := -39; y < 39; y++ {
+	var y int
+	var x int
+	var i int
+	for y = -39; y < 39; y++ {
 		fmt.Printf("\n")
-		for x := -39; x < 39; x++ {
-
-			i := mandelbrot(float64(x)/40.0, float64(y)/40.0)
-
+		for x = -39; x < 39; x++ {
+			i = mandelbrot(float64(x)/40.0, float64(y)/40.0)
 			if i == 0 {
 				fmt.Printf("*")
 			} else {
@@ -45,7 +46,7 @@ func mandelbrot(x float64, y float64) int {
 			break
 		}
 	}
-	
+
 	return i
 }
 
