@@ -37,6 +37,11 @@ func (p *Human) Fullname() {
 	fmt.Println(p.first_name + " " + p.last_name)
 }
 
+func New(sound string, first_name string, last_name string) * Human {
+	p := &Human{Ape{Animal{sound}}, first_name, last_name}
+	return p
+}
+
 func main() {
 	a := Animal{"zzzz"}
 	a.Say()
@@ -46,7 +51,7 @@ func main() {
 	aa.Say()
 	aa.Hello()
 	
-	p := Human{Ape{Animal{"Yo"}}, "Lucy", "Sky"}
+	p := New("Yo", "Lucy", "Sky")
 	p.Say()
 	p.Hello()
 	p.Fullname()
