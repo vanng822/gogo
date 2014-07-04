@@ -2,8 +2,10 @@ package main
 
 import "fmt"
 
-const BAILOUT float64 = 16
-const MAX_ITERATIONS int = 1000
+const (
+	BAILOUT float64 = 16
+	MAX_ITERATIONS int = 1000
+)
 
 func mandelbrot_main() {
 	var y int
