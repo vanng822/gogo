@@ -55,4 +55,5 @@ func main() {
 	p.Say()
 	p.Hello()
 	p.Fullname()
+	fmt.Println(p.sound)
 }
