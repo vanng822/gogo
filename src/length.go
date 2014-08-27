@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+type D map[string]interface{}
+
+type T struct {
+	t []D
+}
 
 func main() {
 	test := map[string]interface{}{
@@ -10,4 +15,8 @@ func main() {
 		"a": 5}
 		
 	fmt.Println(len(test))
+	
+	t := new(T)
+	
+	fmt.Println(len(t.t))
 }
