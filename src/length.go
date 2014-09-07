@@ -8,6 +8,14 @@ type T struct {
 	t []D
 }
 
+type P struct {
+
+}
+
+func List(p []P) {
+	fmt.Println("List", len(p))
+}
+
 func main() {
 	test := map[string]interface{}{
 		"1": 2,
@@ -19,4 +27,6 @@ func main() {
 	t := new(T)
 	
 	fmt.Println(len(t.t))
+	tp := make([]P, 0)
+	List(tp)
 }
